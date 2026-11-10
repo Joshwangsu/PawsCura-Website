@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PawsCura – AI-Powered Pet Health Assessment & Vet Care App</title>
+  <meta name="description" content="PawsCura is an AI-powered pet health app: scan visible symptoms, get 4-level urgency triage, chat with the AI Chatbot 24/7 and find nearby vet clinics. Download the Android APK." />
+  <meta name="theme-color" content="#FFF8F1" />
+  <link rel="icon" type="image/png" href="Images/App Logo.png" />
+  <meta property="og:title" content="PawsCura – Smart Veterinary Triage in Your Pocket" />
+  <meta property="og:description" content="Scan symptoms, get instant urgency assessments, chat with the AI Chatbot and locate nearby vets." />
+  <meta property="og:image" content="Images/App Logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <a href="#top" class="brand" aria-label="PawsCura home">
+        <img src="Images/App Logo.png" alt="" class="brand-logo" width="36" height="36" />
+        <span class="brand-name">PawsCura</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#ai-technology">AI Technology</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#download">Download</a></li>
+        <li class="nav-cta-mobile"><a href="#download" class="btn btn-primary btn-block">
+          <i data-lucide="download"></i> Download APK</a></li>
+      </ul>
+
+      <a href="#download" class="btn btn-primary nav-cta">
+        <i data-lucide="download"></i> Download APK
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="badge">✨ AI-Powered Pet Diagnostics &amp; Care</span>
+          <h1>Smart Veterinary Triage &amp; <span class="accent">Health Care</span> in Your Pocket</h1>
+          <p class="lead">Scan visible symptoms, get instant 4-level urgency assessments, chat 24/7 with the AI Chatbot, and locate nearby veterinary clinics with real-time road routing.</p>
+
+          <div class="hero-ctas">
+            <a href="#download" class="btn btn-primary btn-lg js-apk-link" data-direct="true">
+              <i data-lucide="smartphone"></i>
+              <span class="btn-stack">
+                <span>Download for Android (.APK)</span>
+                <small>Android 8.0+ · Free download</small>
+              </span>
+              <span class="version-pill js-version">v1.0.0</span>
+            </a>
+            <a href="#features" class="btn btn-ghost btn-lg"><i data-lucide="sparkles"></i> Explore Features</a>
+          </div>
+
+          <ul class="urgency-legend" aria-label="Urgency levels">
+            <li><span class="dot safe"></span>Safe</li>
+            <li><span class="dot mild"></span>Mild</li>
+            <li><span class="dot moderate"></span>Moderate</li>
+            <li><span class="dot urgent"></span>Urgent</li>
+          </ul>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="hero-visual reveal" style="--d:.15s">
+          <div class="phone-stage" id="phoneStage">
+            <div class="phone" id="phone">
+              <div class="phone-notch"></div>
+              <div class="screen">
+                <div class="app-top">
+                  <div>
+                    <small>Good morning 👋</small>
+                    <strong>Your Pets</strong>
+                  </div>
+                  <img src="Images/App Logo.png" alt="" width="34" height="34" />
+                </div>
+
+                <div class="pet-widget">
+                  <img src="Images/Login.png" alt="Buddy the dog" class="pet-avatar" />
+                  <div class="pet-info">
+                    <strong>Buddy</strong>
+                    <span>Beagle · 3 yrs · 11.4 kg</span>
+                    <div class="pet-tags"><em>Dog</em><em>12 scans</em></div>
+                  </div>
+                </div>
+
+                <div class="scan-card" id="scanCard" data-level="safe">
+                  <div class="scan-head">
+                    <span class="scan-title"><i data-lucide="scan-search"></i> AI Health Scan</span>
+                    <span class="status-badge" id="statusBadge">Safe</span>
+                  </div>
+                  <div class="scan-body">
+                    <img src="Images/DogCheck.png" alt="" id="scanMascot" />
+                    <div>
+                      <strong id="scanCondition">Healthy skin &amp; coat</strong>
+                      <p id="scanTip">No concerning signs detected. Keep up the regular grooming routine.</p>
+                    </div>
+                  </div>
+                  <div class="conf">
+                    <span>Confidence</span>
+                    <div class="conf-bar"><i id="confFill" style="width:94%"></i></div>
+                    <b id="confVal">94%</b>
+                  </div>
+                </div>
+
+                <div class="mini-row">
+                  <div class="mini"><i data-lucide="map-pin"></i><span>3 vets nearby</span></div>
+                  <div class="mini"><i data-lucide="history"></i><span>Auto-logged</span></div>
+                </div>
+
+                <div class="tabbar">
+                  <i data-lucide="home" class="on"></i>
+                  <i data-lucide="scan-line"></i>
+                  <i data-lucide="map"></i>
+                  <i data-lucide="user"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Chatbot bubble -->
+            <div class="float-card chat-float">
+              <img src="Images/Chatbot.png" alt="AI Chatbot mascot" />
+              <div>
+                <strong>AI Chatbot</strong>
+                <span>“Buddy's scan looks fine! Want grooming tips?”</span>
+              </div>
+            </div>
+
+            <div class="float-card vet-float">
+              <i data-lucide="navigation"></i>
+              <div><strong>Happy Paws Clinic</strong><span>Open · 1.2 km · 4 min</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="reveal">
+            <span class="eyebrow">About PawsCura</span>
+            <h2>Who we are &amp; why we built PawsCura</h2>
+            <p class="muted-lg"><strong>The problem.</strong> Pet owners often struggle to tell whether a skin rash, eye discharge, or behavioral change needs simple home care or an emergency vet visit. Waiting too long can be costly — rushing in every time is stressful and expensive.</p>
+            <p class="muted-lg"><strong>Our mission.</strong> PawsCura bridges the gap between pet owners and licensed veterinarians through accessible AI pre-assessment, automatic pet health record-keeping, and instant clinic discovery — so every decision about your pet's health is faster and better informed.</p>
+          </div>
+          <div class="about-art reveal" style="--d:.1s">
+            <img src="Images/CatQuestion.png" alt="Curious cat mascot wondering about its health" />
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <article class="card stat reveal">
+            <div class="icon-chip"><i data-lucide="activity"></i></div>
+            <h3>4-Level Clinical Triage</h3>
+            <div class="chips">
+              <span class="chip safe">Safe</span><span class="chip mild">Mild</span>
+              <span class="chip moderate">Moderate</span><span class="chip urgent">Urgent</span>
+            </div>
+          </article>
+          <article class="card stat reveal" style="--d:.1s">
+            <div class="icon-chip"><i data-lucide="message-circle-heart"></i></div>
+            <h3>24/7 AI Vet Assistant</h3>
+            <p>AI Chatbot</p>
+          </article>
+          <article class="card stat reveal" style="--d:.2s">
+            <div class="icon-chip"><i data-lucide="map-pinned"></i></div>
+            <h3>Real-Time Vet Locator</h3>
+            <p>GPS &amp; Road Route Directions</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section-tint" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Core Features</span>
+          <h2>Everything your pet's health needs, in one app</h2>
+          <p>Six powerful tools designed around real pet-owner worries.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card bento-item b-scan reveal">
+            <div class="icon-chip"><i data-lucide="scan-search"></i></div>
+            <h3>AI Visual &amp; Symptom Scanner</h3>
+            <p>Upload or snap a photo of your dog or cat and select symptoms. Our hybrid AI identifies potential conditions and generates a structured health assessment.</p>
+            <img class="bento-mascot" src="Images/DogGlass.png" alt="" loading="lazy" />
+          </article>
+
+          <article class="card bento-item b-auto reveal" style="--d:.08s">
+            <div class="icon-chip"><i data-lucide="scan-face"></i></div>
+            <h3>Smart Pet Auto-Detection &amp; Auto-Record</h3>
+            <p>Uses multi-angle reference photos (Front, Left, Right) to automatically recognize which of your pets is being scanned and logs the assessment straight to their medical history.</p>
+            <div class="angles"><span>Front</span><span>Left</span><span>Right</span></div>
+          </article>
+
+          <article class="card bento-item b-tier reveal" style="--d:.16s">
+            <div class="icon-chip"><i data-lucide="siren"></i></div>
+            <h3>4-Tier Urgency Classification</h3>
+            <p>Clear color-coded severity badges with tailored home-care tips and red-flag warnings for when to see a vet immediately.</p>
+            <div class="chips">
+              <span class="chip safe">Safe</span><span class="chip mild">Mild</span>
+              <span class="chip moderate">Moderate</span><span class="chip urgent">Urgent</span>
+            </div>
+          </article>
+
+          <article class="card bento-item b-chat dark reveal">
+            <div class="icon-chip"><i data-lucide="bot"></i></div>
+            <h3>24/7 AI Chatbot</h3>
+            <p>An always-accessible, draggable veterinary assistant that knows your pets' profiles and recent health scans to answer follow-up care questions.</p>
+            <img class="bento-mascot" src="Images/Chatbot.png" alt="" loading="lazy" />
+          </article>
+
+          <article class="card bento-item b-map reveal" style="--d:.08s">
+            <div class="icon-chip"><i data-lucide="map-pin"></i></div>
+            <h3>Nearby Vet Clinic Finder &amp; Routing</h3>
+            <p>Interactive map powered by Google Maps &amp; OSRM road-routing showing nearby veterinary clinics, open/closed status, operating hours, services, and turn-by-turn route lines.</p>
+          </article>
+
+          <article class="card bento-item b-profile has-mascot reveal" style="--d:.16s">
+            <div class="icon-chip"><i data-lucide="paw-print"></i></div>
+            <h3>Digital Pet Profiles &amp; Health Timeline</h3>
+            <p>Track multiple pets, breeds, birthdays, weight, customizable card colors, and filterable medical scan history in one place.</p>
+            <img class="bento-mascot sleepy" src="Images/CatSleep.png" alt="" loading="lazy" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How It Works</span>
+          <h2>From worry to answer in four steps</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step card reveal">
+            <span class="step-num">1</span>
+            <img src="Images/Login.png" alt="" loading="lazy" />
+            <h3>Create Your Pet's Profile</h3>
+            <p>Register your dog or cat with 3 reference angles (Front, Left, Right) and basic details.</p>
+          </li>
+          <li class="step card reveal" style="--d:.1s">
+            <span class="step-num">2</span>
+            <img src="Images/DogGlass.png" alt="" loading="lazy" />
+            <h3>Snap a Photo &amp; Describe Symptoms</h3>
+            <p>Capture the affected area or describe behavioral changes in the Scan tab.</p>
+          </li>
+          <li class="step card reveal" style="--d:.2s">
+            <span class="step-num">3</span>
+            <img src="Images/DogCheck.png" alt="" loading="lazy" />
+            <h3>Get Instant AI Assessment &amp; Auto-Log</h3>
+            <p>Receive a disease identification (YOLO11) and comprehensive clinical triage report (Google Gemini AI), automatically saved to your pet's history.</p>
+          </li>
+          <li class="step card reveal" style="--d:.3s">
+            <span class="step-num">4</span>
+            <img src="Images/Chatbot.png" alt="" loading="lazy" />
+            <h3>Chat with the AI Chatbot or Navigate to a Vet</h3>
+            <p>Ask follow-up questions or tap “Find a Vet Near Me” to get instant road directions to the nearest open clinic.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ AI TECHNOLOGY ============ -->
+    <section class="section dark-section" id="ai-technology">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow light">AI Technology</span>
+          <h2>A hybrid AI pipeline built for pet triage</h2>
+          <p>Computer vision finds it. Generative AI explains it. Maps get you there.</p>
+        </div>
+
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <i data-lucide="eye"></i>
+            <h3>YOLO11 Detection</h3>
+            <p>A real-time object-detection model analyses your photo to identify visible conditions on your pet's skin, eyes and coat.</p>
+          </article>
+          <div class="tech-arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></div>
+          <article class="tech-card reveal" style="--d:.1s">
+            <i data-lucide="brain-circuit"></i>
+            <h3>Google Gemini Triage</h3>
+            <p>Gemini turns detections and your described symptoms into a structured report: urgency level, home-care tips and red flags.</p>
+          </article>
+          <div class="tech-arrow" aria-hidden="true"><i data-lucide="arrow-right"></i></div>
+          <article class="tech-card reveal" style="--d:.2s">
+            <i data-lucide="route"></i>
+            <h3>Google Maps + OSRM</h3>
+            <p>If a vet visit is needed, nearby clinics and real road routes are a single tap away.</p>
+          </article>
+        </div>
+
+        <div class="faq-wrap reveal" id="faq">
+          <img class="faq-mascot" src="Images/CatQuestion.png" alt="" loading="lazy" />
+          <h3 class="faq-title">Frequently asked questions</h3>
+          <div class="faq">
+            <details>
+              <summary>Can PawsCura replace my veterinarian?</summary>
+              <p>No. PawsCura gives AI-assisted informational triage to help you decide how urgently to seek care. It is not a substitute for professional veterinary diagnosis or treatment.</p>
+            </details>
+            <details>
+              <summary>Which pets are supported?</summary>
+              <p>PawsCura currently supports dogs and cats, including multiple pet profiles with breed, birthday, weight and custom card colors.</p>
+            </details>
+            <details>
+              <summary>Is the app really free?</summary>
+              <p>Yes. The Free tier includes 1 pet profile, up to 5 AI scans per month, 5 saved history logs, the 3 nearest clinics and full access to the AI Chatbot. Upgrade to Premium to remove limits and ads.</p>
+            </details>
+            <details>
+              <summary>Why does Android warn me when installing the APK?</summary>
+              <p>Android shows a prompt for any app installed outside the Play Store. Allow “Install from Unknown Sources” for your browser or file manager just for this install, then you can turn it back off.</p>
+            </details>
+            <details>
+              <summary>Is an iOS version coming?</summary>
+              <p>An iOS App Store release is on our future development roadmap. For now PawsCura is available on Android (8.0+).</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANS ============ -->
+    <section class="section" id="plans">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Plans</span>
+          <h2>Start free. Go Premium when you're ready.</h2>
+        </div>
+
+        <div class="plans">
+          <article class="card plan reveal">
+            <h3>Free Tier</h3>
+            <div class="price"><b>$0</b><span>forever</span></div>
+            <ul class="checks">
+              <li><i data-lucide="check"></i>1 Pet Profile Slot</li>
+              <li><i data-lucide="check"></i>Up to 5 AI Health Scans per month</li>
+              <li><i data-lucide="check"></i>5 Saved Scan History Logs</li>
+              <li><i data-lucide="check"></i>3 Nearest Veterinary Clinics on Map</li>
+              <li><i data-lucide="check"></i>24/7 AI Chatbot Access</li>
+            </ul>
+          </article>
+
+          <article class="card plan premium reveal" style="--d:.1s">
+            <span class="ribbon">Best value</span>
+            <h3>PawsCura Premium</h3>
+            <div class="price"><b>$9.99</b><span>USD / month</span></div>
+            <p class="price-alt">Cancel anytime. Unlock everything.</p>
+            <ul class="checks">
+              <li><i data-lucide="check"></i>Unlimited Pet Profiles</li>
+              <li><i data-lucide="check"></i>Unlimited AI Health Scans</li>
+              <li><i data-lucide="check"></i>Unlimited Medical History Logs</li>
+              <li><i data-lucide="check"></i>Unlock All Nearby Veterinary Clinics</li>
+              <li><i data-lucide="check"></i>100% Ad-Free Experience</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOWNLOAD ============ -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="download-card reveal">
+          <div class="dl-main">
+            <span class="eyebrow light">Get the app</span>
+            <h2>Download PawsCura for Android</h2>
+            <p>Install the APK directly on your phone and register your first pet in minutes.</p>
+
+            <a href="./PawsCura.apk" class="btn btn-light btn-lg js-apk-link" download>
+              <i data-lucide="download"></i> Download PawsCura.apk (Android 8.0+)
+            </a>
+            <p class="dl-meta"><span class="js-version">v1.0.0</span> · Free · Android 8.0 or newer</p>
+
+            <h3 class="install-title">Install in 3 steps</h3>
+            <ol class="install">
+              <li><span>1</span><p>Tap <strong>“Download PawsCura.apk”</strong> on your Android phone.</p></li>
+              <li><span>2</span><p>Open the downloaded file and allow <em>“Install from Unknown Sources”</em> if prompted by Android.</p></li>
+              <li><span>3</span><p>Launch <strong>PawsCura</strong>, sign up, and register your first pet!</p></li>
+            </ol>
+          </div>
+
+          <aside class="dl-side">
+            <div class="qr-box">
+              <div class="qr" id="qrCode" aria-label="QR code to download the APK">
+                <!-- Placeholder shown until the QR code is generated -->
+                <div class="qr-placeholder">
+                  <i data-lucide="qr-code"></i>
+                </div>
+              </div>
+              <strong>Scan to download</strong>
+              <span>Point your phone camera at the code</span>
+            </div>
+            <img class="dl-mascot" src="Images/CatSleep.png" alt="" loading="lazy" />
+            <div class="ios-soon">
+              <i data-lucide="apple"></i>
+              <div><strong>iOS — Coming Soon</strong><span>On our Future Development Roadmap</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <img src="Images/App Logo.png" alt="" width="36" height="36" class="brand-logo" />
+          <span class="brand-name light">PawsCura</span>
+        </a>
+        <p>AI-powered pet health assessment &amp; veterinary care in your pocket.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <strong>Explore</strong>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#ai-technology">AI Technology</a>
+        <a href="#plans">Plans</a>
+        <a href="#download">Download</a>
+      </nav>
+      <div class="disclaimer">
+        <strong><i data-lucide="shield-alert"></i> Medical disclaimer</strong>
+        <p>PawsCura provides AI-assisted informational triage and is not a substitute for professional veterinary diagnosis. If your pet is in distress, contact a licensed veterinarian immediately.</p>
+      </div>
+    </div>
+    <div class="container copyright">
+      © <span id="year">2026</span> PawsCura. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

@@ -376,3 +376,4 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 .faq-mascot { width: 110px; margin: 0 auto 10px; background: var(--cream); border-radius: 28px; padding: 8px 14px; }
 .dl-mascot { width: 130px; margin: 0 auto -6px; background: var(--cream); border-radius: 28px; padding: 6px; }
 @media (max-width: 860px) { .b-profile.has-mascot { padding-right: 28px !important; } }
+.angles { flex-wrap: wrap; } .angles span { flex: 1 1 calc(50% - 8px); }
